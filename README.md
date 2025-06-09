@@ -27,20 +27,6 @@ A Chrome Extension that detects and censors hate speech, obscenity, and offensiv
 
 ---
 
-## 📂 Folder Structure
-
-```bash
-chrome-hate-text-detector/
-├── extension/              # All extension source code
-│   ├── popup/              # Popup UI HTML/CSS/JS
-│   ├── content/            # Scripts injected into webpages
-│   ├── background/         # Background logic
-│   ├── modules/            # NLP libraries (jspos)
-│   ├── engine/             # Model config and JSON data
-│   ├── manifest.json       # Chrome extension config
-│   ├── style.scss          # SCSS styling
-├── images/                 # Screenshots or logos
-└── README.md
 
 ## 🔧 How to Install Locally
 
@@ -57,3 +43,20 @@ chrome-hate-text-detector/
 **Swadha Dwivedi**  
 Final Year Project – Chrome Hate Speech Filter  
 [GitHub Profile](https://github.com/swadhadwivedi)
+
+## 📂 Folder Structure
+
+```bash
+chrome-hate-text-detector/
+├── extension/              # All extension source code
+│   ├── popup/              # Popup UI HTML/CSS/JS
+│   ├── content/            # Scripts injected into webpages
+│   ├── background/         # Background logic
+│   ├── modules/            # NLP libraries (jspos)
+│   ├── engine/             # Model config and JSON data
+│   ├── manifest.json       # Chrome extension config
+│   ├── style.scss          # SCSS styling
+├── images/                 # Screenshots or logos
+└── README.md
+
+---
