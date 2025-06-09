@@ -38,10 +38,13 @@ A Chrome Extension that detects and censors hate speech, obscenity, and offensiv
 
 ---
 
-## 👤 Author
+
+## 🧑‍💻 Author
 
 **Swadha Dwivedi**  
-Final Year Project – Chrome Hate Speech Filter  
+Frontend Developer | Passionate about clean UI and intuitive UX  
+🔗 [LinkedIn](https://www.linkedin.com/in/swadhadwivedi)  
+📫 dswadha@gmail.com
 [GitHub Profile](https://github.com/swadhadwivedi)
 
 ## 📂 Folder Structure
