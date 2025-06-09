@@ -1,13 +1,3 @@
-/*!
- * jsPOS
- *
- * Copyright 2010, Percy Wegmann
- * Licensed under the LGPLv3 license
- * http://www.opensource.org/licenses/lgpl-3.0.html
- * 
- * Enhanced by Toby Rahilly to use a compressed lexicon format as of version 0.2.
- */
-
 import { LEXICON_TAG_MAP, POSTAGGER_LEXICON } from './lexicon.js'
 
 function POSTagger() {

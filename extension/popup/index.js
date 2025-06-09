@@ -4,27 +4,31 @@ const threat = new Slider('threat', '#0ea700');
 
 const enable = new SlideButton('enable-button', true);
 
-let save = () => {
-    let settings = {
-        sensibility: parseInt(sensibility.value),
-        obscenity: parseInt(obscenity.value),
-        threat: parseInt(threat.value),
-    
-        enable: enable.toggle,
+let save = (triggeredByApply = false) => {
+  let settings = {
+    sensibility: parseInt(sensibility.value),
+    obscenity: parseInt(obscenity.value),
+    threat: parseInt(threat.value),
+    enable: enable.toggle,
+    lang: 'en',
+    mode: 'gentleman', // hardcoded, always default
+    theme: document.getElementById('theme').value
+  };
 
-        lang: 'en',
-        mode: document.getElementById('mode').value,
-        theme: document.getElementById('theme').value,
-    };
-    console.log(settings);
-    chrome.storage.sync.set(settings, () => console.log('Settings saved'));
-    chrome.tabs.getSelected(null, function(tab) {
+  chrome.storage.sync.set(settings, () => {
+    console.log('Settings saved', settings);
+
+    if (!triggeredByApply && settings.enable) {
+      chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
         let code = 'window.location.reload();';
-        chrome.tabs.executeScript(tab.id, {code: code});
-        setTimeout(() => {
-            window.close();
-        }, 450);
-    });
+        chrome.tabs.executeScript(tabs[0].id, { code });
+      });
+    }
+
+    if (triggeredByApply) {
+      setTimeout(() => window.close(), 450);
+    }
+  });
 };
 
 /*
@@ -45,8 +49,12 @@ window.onload = () => {
     chrome.storage.sync.get('threat', data => { /*console.log(data);*/ threat.set(data.threat); threat.input.val(data.threat).trigger('input'); });
 };
 
-document.getElementById('apply-button').addEventListener('click', save);
-document.getElementById('enable-input').addEventListener('click', _ => {enable.toggle = !enable.toggle; save();});
+document.getElementById('apply-button').addEventListener('click', () => save(true));
+
+document.getElementById('enable-input').addEventListener('click', () => {
+  enable.toggle = !enable.toggle;
+  save(false); // trigger reload only on enable
+});
 document.getElementById("settings").addEventListener("click", () => {
     chrome.runtime.openOptionsPage(() => null)
 });

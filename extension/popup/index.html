@@ -6,16 +6,17 @@
 
 <body style="width: 250px; height: 500px;">
     <div class="wrapper">
-        <img src="../resources/fuse_censor_64.png" width="30" height="30" />
-        <h2>Fuse Censor Extension</h2>
+        <img src="pic.png" width="30" height="30" />
+        <h2>HATE TEXT DETECTION</h2>
         <button id="settings">
-            <img src="https://image.flaticon.com/icons/png/512/15/15185.png" width="25" height="25" />
+            <img src="pic.png" width="25" height="25" />
             <link rel="stylesheet" href="style.scss">
         </button>
     </div>
 
     <hr>
-    <p id="description"><b>Fuse Censor</b> is an extension that provides an efficient way to censor swear words and
+    <p id="description"><b>HATE SPEECH DETECTION MAJOR PROJECT</b> is an extension that provides an efficient way to
+        censor swear words and
         negative contents based on sentiment analysis through Natural Language Processing.</p>
     <hr>
 
@@ -35,7 +36,8 @@
             <td style="left:25px ; position:relative">
                 <div class="language">
                     <div id="dropdown">
-                        <input checked="checked" type="radio" id="line1" name="line-style" value="1" id='input-english'/>
+                        <input checked="checked" type="radio" id="line1" name="line-style" value="1"
+                            id='input-english' />
                         <label id='english' for="line1">English</label>
                         <!-- <input type="radio" id="line2" name="line-style" value="2" id='input-french'/>
                         <label id='french' for="line2">French</label> -->
@@ -44,30 +46,36 @@
             </td>
         </tr>
         <tr>
-            <td></td>
-            <td td style="left:6px ; position:relative">
-                <div style="text-indent: 10px;">
+
+        <tr>
+            <td>Mode</td>
+            <td style="left:25px; position:relative">
+                <div class="mode">
+                    <div id="dropdown">
+                        <input checked="checked" type="radio" id="line-mode" name="mode-style" value="gentleman"
+                            style="display:none;" />
+                        <label for="line-mode" id="gents">Gentleman</label>
+                    </div>
                 </div>
             </td>
+        </tr>
+
+
+        <td></td>
+        <td td style="left:6px ; position:relative">
+            <div style="text-indent: 10px;">
+            </div>
+        </td>
 
         </tr>
     </table>
     <hr>
 
     <table width="330" cellpading="3">
-        <tr>
-            <td>Mode <br><br></td>
-            <td style="left:35px ; position:relative">
-                <select name="mode" id="mode" width="100px" style="position: relative; top: -8px;">
-                    <option value="spoiler">Spoiler</option>
-                    <option value="gentleman">Gentleman</option>
-                </select>
-            </td>
 
-        </tr>
         <tr>
             <td>Theme</td>
-            <td style=" left:51 ; position:relative">
+            <td style=" left:40 ; position:relative">
                 <div style="text-indent: 15px;">
                     <select name="style" id="theme" width="100px">
                         <option value="dark">Dark</option>

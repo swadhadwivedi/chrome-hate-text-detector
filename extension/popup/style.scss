@@ -27,6 +27,10 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+#dropdown label {
+  color: black !important;
+}
+
 
 
 
@@ -339,4 +343,7 @@ input:checked + .slider:before {
 
 #dropdown input:checked + label#english {
     opacity:1 !important; display:block;
+}
+#dropdown input:checked + label#gents{
+     opacity:1 !important; display:block;
 }

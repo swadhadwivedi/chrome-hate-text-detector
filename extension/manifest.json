@@ -1,10 +1,10 @@
 {
     "manifest_version": 2,
-    "name": "Fuse Censor Extension",
+    "name": "Censoring Guard",
     "version": "1.0.0",
     "description": "Censor swear words and negative content using Natural Langage Processing ",
     "icons": {
-        "64": "resources/fuse_censor_64.png"
+        "64": "resources/pic.png"
     },
     "permissions": [
         "activeTab",
@@ -25,7 +25,8 @@
             ],
             "css": [
                 "content/spoiler.css"
-            ]
+            ],
+            "run_at": "document_idle"
         }
     ],
     "background": {
@@ -40,7 +41,6 @@
     },
     "web_accessible_resources": [
         "content/gentlemanmode.js",
-        "content/spoilermode.js",
         "modules/jspos/lexer.js",
         "modules/jspos/lexicon.js",
         "modules/jspos/POSTagger.js",

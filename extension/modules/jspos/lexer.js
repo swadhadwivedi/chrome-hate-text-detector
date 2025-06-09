@@ -1,11 +1,3 @@
-/*!
- * jsPOS
- *
- * Copyright 2010, Percy Wegmann
- * Licensed under the GNU LGPLv3 license
- * http://www.opensource.org/licenses/lgpl-3.0.html
- */
-
 function LexerNode(string, regex, regexs) {
     this.string = string;
     this.children = [];
